@@ -44,8 +44,7 @@ return 1;
 ## Automated triage implementation
 
 ### RTIR scrip for sending Incident Report to SOAR webhook
-#### Custom Condition:
-``On Create``
+Custom Condition: ``On Create``
 Custom action commit code
 ```perl
 use LWP::UserAgent;
