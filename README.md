@@ -2,7 +2,7 @@
 Sample code snippets used during automation tools training
 
 ## RTIR Scrip: Adjust Priority on Importance or Severity Change
-Custom Condition:
+1. Custom Condition:
 ```perl
 # Do calculation if: new ticket created or CF values are changed
 return 1 if $self->TransactionObj->Type eq "Create";
@@ -12,7 +12,7 @@ $cf->Load( $self->TransactionObj->Field );
 return 0 unless $cf->Name eq 'Importance' || $cf->Name eq 'Severity';
 return 1;
 ```
-Custom action commit code
+2. Custom action commit code
 ```perl
 my $severities = {
 	'High risky' => 0,'Normal' => 1,'Low' => 2,
@@ -44,8 +44,9 @@ return 1;
 ## Automated triage implementation
 
 ### RTIR scrip for sending Incident Report to SOAR webhook
-Custom Condition: ``On Create``
-Custom action commit code
+1. Custom Condition: ``On Create``
+
+1. Custom action commit code
 ```perl
 use LWP::UserAgent;
 use JSON;
